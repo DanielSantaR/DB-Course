@@ -1,0 +1,384 @@
+-- Generado por Oracle SQL Developer Data Modeler 19.2.0.182.1216
+--   en:        2019-09-27 08:28:18 COT
+--   sitio:      Oracle Database 11g
+--   tipo:      Oracle Database 11g
+
+
+
+DROP TABLE caja CASCADE CONSTRAINTS;
+
+DROP TABLE cajero CASCADE CONSTRAINTS;
+
+DROP TABLE categoria CASCADE CONSTRAINTS;
+
+DROP TABLE cliente CASCADE CONSTRAINTS;
+
+DROP TABLE compraxsucursal CASCADE CONSTRAINTS;
+
+DROP TABLE domiciliario CASCADE CONSTRAINTS;
+
+DROP TABLE domicilio CASCADE CONSTRAINTS;
+
+DROP TABLE empleado CASCADE CONSTRAINTS;
+
+DROP TABLE jefe CASCADE CONSTRAINTS;
+
+DROP TABLE marca CASCADE CONSTRAINTS;
+
+DROP TABLE producto CASCADE CONSTRAINTS;
+
+DROP TABLE prodxcompra CASCADE CONSTRAINTS;
+
+DROP TABLE prodxsucursal CASCADE CONSTRAINTS;
+
+DROP TABLE prodxventa CASCADE CONSTRAINTS;
+
+DROP TABLE promocion CASCADE CONSTRAINTS;
+
+DROP TABLE proveedor CASCADE CONSTRAINTS;
+
+DROP TABLE sucursal CASCADE CONSTRAINTS;
+
+DROP TABLE venta CASCADE CONSTRAINTS;
+
+DROP CLUSTER prodxventa;
+
+DROP CLUSTER prodxcompra;
+
+DROP CLUSTER Compraxsucursal;
+
+DROP CLUSTER venta;
+
+DROP CLUSTER domicilio;
+    
+CREATE CLUSTER ProdxVenta ( venta_codventa NUMBER, prodxsucursal_codproducto NUMBER, prodxsucursal_codsucursal NUMBER)
+   SIZE 4096 SINGLE TABLE HASHKEYS 6221591
+   PCTFREE 20
+   STORAGE( INITIAL 13191M NEXT 40000M); 
+   
+CREATE CLUSTER Prodxcompra (compraxsucursal_idcompra NUMBER, producto_codproducto NUMBER)
+   SIZE 4096 SINGLE TABLE HASHKEYS 28664
+   PCTFREE 20
+   STORAGE( INITIAL 66M NEXT 20M); 
+
+CREATE CLUSTER Compraxsucursal (IDCompra NUMBER)
+   SIZE 4096 SINGLE TABLE HASHKEYS 5
+   PCTFREE 20
+   STORAGE( INITIAL 20K NEXT 5K); 
+   
+CREATE CLUSTER Venta (fechaventa TIMESTAMP WITH LOCAL TIME ZONE)
+   SIZE 4096 SINGLE TABLE HASHKEYS 516510
+   PCTFREE 20
+   STORAGE( INITIAL 1427M NEXT 500M); 
+   
+CREATE CLUSTER domicilio (fecha_de_entrega TIMESTAMP WITH LOCAL TIME ZONE)
+   SIZE 4096 SINGLE TABLE HASHKEYS 176731
+   PCTFREE 20
+   STORAGE( INITIAL 198M NEXT 60M); 
+
+
+CREATE TABLE caja (
+    numerocaja  NUMBER NOT NULL CHECK (numerocaja >= 0)
+);
+
+ALTER TABLE caja ADD CONSTRAINT caja_pk PRIMARY KEY ( numerocaja );
+
+CREATE TABLE cajero (
+    idempleado  NUMBER NOT NULL CHECK (idempleado >= 0)
+);
+
+ALTER TABLE cajero ADD CONSTRAINT cajero_pk PRIMARY KEY ( idempleado );
+
+
+CREATE TABLE categoria (
+    codcategoria           NUMBER NOT NULL CHECK (codcategoria >= 0),
+    descripcioncategoria   VARCHAR2(20) NOT NULL
+);
+
+ALTER TABLE categoria ADD CONSTRAINT categoria_pk PRIMARY KEY ( codcategoria );
+
+CREATE TABLE cliente (
+    idcliente            NUMBER NOT NULL CHECK (idcliente >= 0),
+    nombreusuario        VARCHAR2(20 CHAR) NOT NULL, 
+    direccioncliente     VARCHAR2(20 CHAR) NOT NULL,
+    contrasena           VARCHAR2(25) NOT NULL CHECK (LENGTH(contrasena)>5),
+    distanciadomicilio   NUMBER NOT NULL CHECK (distanciadomicilio >= 0),
+    edadcliente          NUMBER NOT NULL CHECK (edadcliente >= 0),
+    nombrecompleto       VARCHAR2(30 CHAR) NOT NULL CHECK ( nombrecompleto LIKE ('[[:ALPHA:]]+')),
+    telefonocliente      NUMBER NOT NULL CHECK (LENGTH(telefonocliente)>7 AND telefonocliente >= 0)
+);
+
+ALTER TABLE cliente ADD CONSTRAINT cliente_pk PRIMARY KEY ( idcliente );
+
+CREATE TABLE compraxsucursal (
+    idcompra                   NUMBER NOT NULL CHECK (idcompra >= 0),
+    sucursal_codsucursal       NUMBER NOT NULL CHECK (sucursal_codsucursal >= 0),
+    cantidadprodductoscompra   NUMBER NOT NULL CHECK (cantidadprodductoscompra >= 0),
+    proveedor_codproveedor     NUMBER NOT NULL CHECK (proveedor_codproveedor >= 0),
+    preciototal                NUMBER NOT NULL CHECK (preciototal >=0))
+    CLUSTER Compraxsucursal (IDCompra);
+
+ALTER TABLE compraxsucursal ADD CONSTRAINT compraxsucursal_pk PRIMARY KEY ( sucursal_codsucursal,
+                                                                            idcompra );
+
+CREATE TABLE domiciliario (
+    idempleado    	NUMBER NOT NULL CHECK (idempleado >= 0)
+);
+
+ALTER TABLE domiciliario ADD CONSTRAINT domiciliario_pk PRIMARY KEY ( idempleado );
+
+
+CREATE TABLE domicilio (
+    coddomicilio         NUMBER NOT NULL CHECK (coddomicilio >= 0),
+    venta_codventa       NUMBER NOT NULL CHECK (venta_codventa >= 0),
+    entregado            CHAR(1) NOT NULL CHECK (entregado in ('T', 'F')),
+    fecha_de_entrega     TIMESTAMP WITH LOCAL TIME ZONE NOT NULL,
+    fecha_de_entregado   TIMESTAMP WITH LOCAL TIME ZONE,
+    descripcion          VARCHAR2(100))
+    CLUSTER domicilio (fecha_de_entrega);
+
+CREATE UNIQUE INDEX domicilio__idx ON
+    domicilio (
+        venta_codventa
+    ASC );
+
+ALTER TABLE domicilio ADD CONSTRAINT domicilio_pk PRIMARY KEY ( coddomicilio );
+
+CREATE TABLE empleado (
+    idempleado             NUMBER NOT NULL CHECK (idempleado >= 0),
+    sucursal_codsucursal   NUMBER NOT NULL CHECK (sucursal_codsucursal >= 0),
+    nombreempleado         VARCHAR2(20 CHAR) NOT NULL CHECK ( nombreempleado LIKE ('[[:ALPHA:]]+')),--TEXTO
+    direccionempleado      VARCHAR2(10 CHAR) NOT NULL,
+    telefonoempleado       NUMBER NOT NULL CHECK (LENGTH(telefonoempleado)>7 AND telefonoempleado >= 0),
+    cargo                  VARCHAR2(12 CHAR) NOT NULL  CHECK (cargo in ('cajero', 'jefe', 'domiciliario')),
+    salario                NUMBER NOT NULL CHECK (salario >= 0)
+);
+
+ALTER TABLE empleado ADD CONSTRAINT empleado_pk PRIMARY KEY ( idempleado );
+
+CREATE TABLE jefe (
+    idempleado    NUMBER NOT NULL CHECK (idempleado >= 0)
+);
+
+ALTER TABLE jefe ADD CONSTRAINT jefe_pk PRIMARY KEY ( idempleado );
+
+CREATE TABLE marca (
+    codmarca           NUMBER NOT NULL CHECK (codmarca >= 0),
+    descripcionmarca   VARCHAR2(20 CHAR) NOT NULL
+);
+
+ALTER TABLE marca ADD CONSTRAINT marca_pk PRIMARY KEY ( codmarca );
+
+CREATE TABLE producto (
+    codproducto              NUMBER NOT NULL CHECK (codproducto >= 0),
+    categoria_codcategoria   NUMBER NOT NULL CHECK (categoria_codcategoria >= 0),
+    marca_codmarca           NUMBER NOT NULL CHECK (marca_codmarca >= 0),
+    descripcionproducto      VARCHAR2(20 CHAR) NOT NULL
+);
+
+ALTER TABLE producto ADD CONSTRAINT producto_pk PRIMARY KEY ( codproducto );
+
+CREATE TABLE prodxcompra (
+    producto_codproducto                     NUMBER NOT NULL CHECK (producto_codproducto >= 0),
+    compraxsucursal_idcompra                 NUMBER NOT NULL CHECK (compraxsucursal_idcompra >= 0),
+    compraxsucursal_codsucursal              NUMBER NOT NULL CHECK (compraxsucursal_codsucursal >= 0),
+    codcategoria                             NUMBER NOT NULL CHECK (codcategoria >= 0),
+    codmarca                                 NUMBER NOT NULL CHECK (codmarca >= 0),
+    cantidadproductoscompra                  NUMBER NOT NULL CHECK (cantidadproductoscompra >= 0),
+    subtotalcompra                           NUMBER NOT NULL CHECK (subtotalcompra >= 0))
+    CLUSTER Prodxcompra (compraxsucursal_idcompra, producto_codproducto);
+
+ALTER TABLE prodxcompra
+    ADD CONSTRAINT prodxcompra_pk PRIMARY KEY ( producto_codproducto,
+                                                compraxsucursal_codsucursal,
+                                                compraxsucursal_idcompra );
+
+CREATE TABLE prodxsucursal (
+    producto_codproducto           NUMBER NOT NULL CHECK (producto_codproducto >= 0),
+    sucursal_codsucursal           NUMBER NOT NULL CHECK (sucursal_codsucursal >= 0),
+    cantidadprodductosinventario   NUMBER NOT NULL CHECK (cantidadprodductosinventario >= 0),
+    precioventaactual              NUMBER NOT NULL CHECK (precioventaactual >= 0)
+);
+
+ALTER TABLE prodxsucursal ADD CONSTRAINT prodxsucursal_pk PRIMARY KEY ( producto_codproducto,
+                                                                        sucursal_codsucursal );
+
+CREATE TABLE prodxventa (
+    prodxsucursal_codproducto   NUMBER NOT NULL CHECK (prodxsucursal_codproducto >= 0),
+    venta_codventa              NUMBER NOT NULL CHECK (venta_codventa >= 0),
+    prodxsucursal_codsucursal   NUMBER NOT NULL CHECK (prodxsucursal_codsucursal >= 0),
+    cantidadprodductosventa     NUMBER NOT NULL CHECK (cantidadprodductosventa >= 0),
+    subtotal                    NUMBER NOT NULL CHECK (subtotal >= 0),
+    promocion_codpromocion      NUMBER CHECK (promocion_codpromocion >= 0),
+    precioenventa               NUMBER NOT NULL CHECK (precioenventa >= 0))
+    CLUSTER ProdxVenta(venta_codventa, prodxsucursal_codproducto, prodxsucursal_codsucursal);
+
+ALTER TABLE prodxventa
+    ADD CONSTRAINT prodxventa_pk PRIMARY KEY ( prodxsucursal_codproducto,
+                                               prodxsucursal_codsucursal,
+                                               venta_codventa );
+                                               
+
+CREATE TABLE promocion (
+    codpromocion           NUMBER NOT NULL CHECK (codpromocion >= 0),
+    fechainiciopromocion   TIMESTAMP WITH LOCAL TIME ZONE NOT NULL,
+    fechafinpromocion      TIMESTAMP WITH LOCAL TIME ZONE NOT NULL,
+    descripcion            VARCHAR2(10) NOT NULL
+);
+
+ALTER TABLE promocion ADD CONSTRAINT promocion_pk PRIMARY KEY ( codpromocion );
+
+CREATE TABLE proveedor (
+    codproveedor        NUMBER NOT NULL CHECK (codproveedor >= 0),
+    nombreproveedor     VARCHAR2(20 CHAR) NOT NULL,
+    telefonoproveedor   NUMBER NOT NULL CHECK (LENGTH (telefonoproveedor)>7 AND telefonoproveedor >= 0)
+);
+
+ALTER TABLE proveedor ADD CONSTRAINT proveedor_pk PRIMARY KEY ( codproveedor );
+
+CREATE TABLE sucursal (
+    codsucursal   NUMBER NOT NULL CHECK (codsucursal >= 0),
+    direccion     VARCHAR2(20 CHAR) NOT NULL,
+    rango         NUMBER NOT NULL CHECK (rango >= 0)
+);
+
+ALTER TABLE sucursal ADD CONSTRAINT sucursal_pk PRIMARY KEY ( codsucursal );
+
+CREATE TABLE venta (
+    codventa               NUMBER NOT NULL  CHECK (codventa >= 0),
+    cliente_idcliente      NUMBER NOT NULL  CHECK (cliente_idcliente >= 0),
+    metodo_de_pago         VARCHAR2(10 CHAR) NOT NULL,
+    fechaventa             TIMESTAMP WITH LOCAL TIME ZONE NOT NULL,
+    tipoventa              VARCHAR2(6 CHAR) NOT NULL CHECK (tipoventa in ('online', 'fisica')),
+    caja_numerocaja        NUMBER NOT NULL  CHECK (caja_numerocaja >= 0),
+    totalventa             NUMBER NOT NULL  CHECK (totalventa >= 0),
+    sucursal_codsucursal   NUMBER NOT NULL  CHECK (sucursal_codsucursal >= 0),
+    CONSTRAINT CHK_metodo_pago CHECK (((tipoventa = 'online') AND metodo_de_pago in ('tarjeta_credito', 'tarjeta_debito', 'pse')) 
+                            OR((tipoventa = 'fisica') AND metodo_de_pago in ('tarjeta_credito', 'tarjeta_debito', 'pse', 'efectivo'))))
+    CLUSTER Venta (fechaventa);
+
+ALTER TABLE venta ADD CONSTRAINT venta_pk PRIMARY KEY ( codventa );
+
+ALTER TABLE cajero
+    ADD CONSTRAINT cajero_empleado_fk FOREIGN KEY ( idempleado )
+        REFERENCES empleado ( idempleado );
+
+ALTER TABLE compraxsucursal
+    ADD CONSTRAINT compraxsucursal_proveedor_fk FOREIGN KEY ( proveedor_codproveedor )
+        REFERENCES proveedor ( codproveedor );
+
+ALTER TABLE compraxsucursal
+    ADD CONSTRAINT compraxsucursal_sucursal_fk FOREIGN KEY ( sucursal_codsucursal )
+        REFERENCES sucursal ( codsucursal );
+
+ALTER TABLE domiciliario
+    ADD CONSTRAINT domiciliario_empleado_fk FOREIGN KEY ( idempleado )
+        REFERENCES empleado ( idempleado );
+
+ALTER TABLE domicilio
+    ADD CONSTRAINT domicilio_venta_fk FOREIGN KEY ( venta_codventa )
+        REFERENCES venta ( codventa );
+
+ALTER TABLE empleado
+    ADD CONSTRAINT empleado_sucursal_fk FOREIGN KEY ( sucursal_codsucursal )
+        REFERENCES sucursal ( codsucursal );
+
+ALTER TABLE jefe
+    ADD CONSTRAINT jefe_empleado_fk FOREIGN KEY ( idempleado )
+        REFERENCES empleado ( idempleado );
+
+ALTER TABLE producto
+    ADD CONSTRAINT producto_categoria_fk FOREIGN KEY ( categoria_codcategoria )
+        REFERENCES categoria ( codcategoria );
+
+ALTER TABLE producto
+    ADD CONSTRAINT producto_marca_fk FOREIGN KEY ( marca_codmarca )
+        REFERENCES marca ( codmarca );
+
+ALTER TABLE prodxcompra
+    ADD CONSTRAINT prodxcompra_compraxsucursal_fk FOREIGN KEY ( compraxsucursal_codsucursal,
+                                                                compraxsucursal_idcompra )
+        REFERENCES compraxsucursal ( sucursal_codsucursal,
+                                     idcompra );
+
+ALTER TABLE prodxcompra
+    ADD CONSTRAINT prodxcompra_producto_fk FOREIGN KEY ( producto_codproducto )
+        REFERENCES producto ( codproducto );
+
+ALTER TABLE prodxsucursal
+    ADD CONSTRAINT prodxsucursal_producto_fk FOREIGN KEY ( producto_codproducto )
+        REFERENCES producto ( codproducto );
+
+ALTER TABLE prodxsucursal
+    ADD CONSTRAINT prodxsucursal_sucursal_fk FOREIGN KEY ( sucursal_codsucursal )
+        REFERENCES sucursal ( codsucursal );
+
+ALTER TABLE prodxventa
+    ADD CONSTRAINT prodxventa_prodxsucursal_fk FOREIGN KEY ( prodxsucursal_codproducto,
+                                                             prodxsucursal_codsucursal )
+        REFERENCES prodxsucursal ( producto_codproducto,
+                                   sucursal_codsucursal );
+
+ALTER TABLE prodxventa
+    ADD CONSTRAINT prodxventa_promocion_fk FOREIGN KEY ( promocion_codpromocion )
+        REFERENCES promocion ( codpromocion );
+
+ALTER TABLE prodxventa
+    ADD CONSTRAINT prodxventa_venta_fk FOREIGN KEY ( venta_codventa )
+        REFERENCES venta ( codventa );
+
+ALTER TABLE venta
+    ADD CONSTRAINT venta_caja_fk FOREIGN KEY ( caja_numerocaja )
+        REFERENCES caja ( numerocaja );
+
+ALTER TABLE venta
+    ADD CONSTRAINT venta_cliente_fk FOREIGN KEY ( cliente_idcliente )
+        REFERENCES cliente ( idcliente );
+
+ALTER TABLE venta
+    ADD CONSTRAINT venta_sucursal_fk FOREIGN KEY ( sucursal_codsucursal )
+        REFERENCES sucursal ( codsucursal );
+
+
+-- Informe de Resumen de Oracle SQL Developer Data Modeler: 
+-- 
+-- CREATE TABLE                            18
+-- CREATE INDEX                             1
+-- ALTER TABLE                             37
+-- CREATE VIEW                              0
+-- ALTER VIEW                               0
+-- CREATE PACKAGE                           0
+-- CREATE PACKAGE BODY                      0
+-- CREATE PROCEDURE                         0
+-- CREATE FUNCTION                          0
+-- CREATE TRIGGER                           0
+-- ALTER TRIGGER                            0
+-- CREATE COLLECTION TYPE                   0
+-- CREATE STRUCTURED TYPE                   0
+-- CREATE STRUCTURED TYPE BODY              0
+-- CREATE CLUSTER                           0
+-- CREATE CONTEXT                           0
+-- CREATE DATABASE                          0
+-- CREATE DIMENSION                         0
+-- CREATE DIRECTORY                         0
+-- CREATE DISK GROUP                        0
+-- CREATE ROLE                              0
+-- CREATE ROLLBACK SEGMENT                  0
+-- CREATE SEQUENCE                          0
+-- CREATE MATERIALIZED VIEW                 0
+-- CREATE MATERIALIZED VIEW LOG             0
+-- CREATE SYNONYM                           0
+-- CREATE TABLESPACE                        0
+-- CREATE USER                              0
+-- 
+-- DROP TABLESPACE                          0
+-- DROP DATABASE                            0
+-- 
+-- REDACTION POLICY                         0
+-- 
+-- ORDS DROP SCHEMA                         0
+-- ORDS ENABLE SCHEMA                       0
+-- ORDS ENABLE OBJECT                       0
+-- 
+-- ERRORS                                   0
+-- WARNINGS                                 0
