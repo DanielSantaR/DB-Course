@@ -1,0 +1,131 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="2EF56B94-646E-33FB-5DD9-B1E581EE0B02" name="PRODXCOMPRA">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-10 03:57:56 UTC</createdTime>
+<ownerDesignName>Modelo</ownerDesignName>
+<engineerTo>
+<item key="619B089B-02AB-9E26-7DA1-016B57AA5CCF" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="CodProducto" id="01953F53-CC63-1D0A-0943-B257D9A4FAE9">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-11 02:54:26 UTC</createdTime>
+<generatorID>985C028C-5199-0EF8-0743-A52D8EF879CF</generatorID>
+<ownerDesignName>Modelo</ownerDesignName>
+<engineerTo>
+<item key="619B089B-02AB-9E26-7DA1-016B57AA5CCF" value="true"/>
+</engineerTo>
+<referedAttribute>65E886D9-8CED-CE54-0E33-67BEECB7F008</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="CodCategoria" id="11EADDAD-DB35-7E3C-6329-A6AAA40237FD">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-10 03:58:24 UTC</createdTime>
+<generatorID>4331FAE1-AF1C-3CAA-05ED-6EF993A5E1D7</generatorID>
+<ownerDesignName>Modelo</ownerDesignName>
+<engineerTo>
+<item key="619B089B-02AB-9E26-7DA1-016B57AA5CCF" value="true"/>
+</engineerTo>
+<referedAttribute>F3188A4B-E34D-3B00-3A0B-5D5AED3D3FBA</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="CodMarca" id="1D9DD645-59E7-FA3F-D4A8-E37A8CF679C6">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-11 02:52:21 UTC</createdTime>
+<generatorID>4331FAE1-AF1C-3CAA-05ED-6EF993A5E1D7</generatorID>
+<ownerDesignName>Modelo</ownerDesignName>
+<engineerTo>
+<item key="619B089B-02AB-9E26-7DA1-016B57AA5CCF" value="true"/>
+</engineerTo>
+<referedAttribute>A59EEDB9-5749-8FFE-B70A-9FF9052005F6</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="PrecioCompra" id="21F2418D-86EC-B68D-7FC3-2E21B0A22B88">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-11 09:35:59 UTC</createdTime>
+<ownerDesignName>Modelo</ownerDesignName>
+<engineerTo>
+<item key="619B089B-02AB-9E26-7DA1-016B57AA5CCF" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="CodSucursal" id="E8F95F01-C398-729F-9ECE-5A2D17C248C6">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-12 23:03:04 UTC</createdTime>
+<generatorID>86BC9AAB-5D9D-3759-81D5-34616FEEE923</generatorID>
+<ownerDesignName>Modelo</ownerDesignName>
+<engineerTo>
+<item key="619B089B-02AB-9E26-7DA1-016B57AA5CCF" value="true"/>
+</engineerTo>
+<referedAttribute>52AC75F0-F71C-7799-FA0F-359634A0B188</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="CodProveedor" id="B79BE9E9-61CB-20AD-E2FE-C05D3551E93E">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-12 23:15:44 UTC</createdTime>
+<generatorID>86BC9AAB-5D9D-3759-81D5-34616FEEE923</generatorID>
+<ownerDesignName>Modelo</ownerDesignName>
+<engineerTo>
+<item key="619B089B-02AB-9E26-7DA1-016B57AA5CCF" value="true"/>
+</engineerTo>
+<referedAttribute>BC592D4A-CC5F-6B71-4C45-8EACBAB6333D</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="IDCompra" id="0A9D4886-5F06-1B0E-1D98-654E10867912">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-13 16:24:52 UTC</createdTime>
+<generatorID>86BC9AAB-5D9D-3759-81D5-34616FEEE923</generatorID>
+<ownerDesignName>Modelo</ownerDesignName>
+<engineerTo>
+<item key="619B089B-02AB-9E26-7DA1-016B57AA5CCF" value="true"/>
+</engineerTo>
+<referedAttribute>B5430FAC-3EAA-7443-0619-084371A4C561</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="C9BA9ABA-C145-2BDF-CA11-35EE202600AC" name="PRODUCTO POR PROVEEDOR PK">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-10 03:58:24 UTC</createdTime>
+<ownerDesignName>Modelo</ownerDesignName>
+<engineerTo>
+<item key="619B089B-02AB-9E26-7DA1-016B57AA5CCF" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>11EADDAD-DB35-7E3C-6329-A6AAA40237FD</attributeRef>
+<attributeRef>1D9DD645-59E7-FA3F-D4A8-E37A8CF679C6</attributeRef>
+<attributeRef>01953F53-CC63-1D0A-0943-B257D9A4FAE9</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

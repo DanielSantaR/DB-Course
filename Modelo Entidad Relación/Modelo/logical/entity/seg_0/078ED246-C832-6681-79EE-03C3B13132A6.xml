@@ -1,0 +1,135 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="078ED246-C832-6681-79EE-03C3B13132A6" name="CLIENTE">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-07 16:55:48 UTC</createdTime>
+<ownerDesignName>Modelo</ownerDesignName>
+<engineerTo>
+<item key="619B089B-02AB-9E26-7DA1-016B57AA5CCF" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="IDCliente" id="D3202C57-4507-8D4D-996B-CEFA933792F2">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-07 16:55:55 UTC</createdTime>
+<ownerDesignName>Modelo</ownerDesignName>
+<engineerTo>
+<item key="619B089B-02AB-9E26-7DA1-016B57AA5CCF" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="NombreUsuario" id="4A431511-4015-F1E3-2297-B194AA0773B2">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-07 16:56:12 UTC</createdTime>
+<ownerDesignName>Modelo</ownerDesignName>
+<engineerTo>
+<item key="619B089B-02AB-9E26-7DA1-016B57AA5CCF" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="DireccionCliente" id="A1FED549-8333-1CF4-E572-A293DD86C11A">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-07 16:57:06 UTC</createdTime>
+<ownerDesignName>Modelo</ownerDesignName>
+<engineerTo>
+<item key="619B089B-02AB-9E26-7DA1-016B57AA5CCF" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Contrasena" id="CDC0EEC3-50CE-9BA1-146F-D53738F1A933">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-10 03:27:09 UTC</createdTime>
+<ownerDesignName>Modelo</ownerDesignName>
+<engineerTo>
+<item key="619B089B-02AB-9E26-7DA1-016B57AA5CCF" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="DistanciaDomicilio" id="EDD37F93-21CB-68BC-70D6-E05DB135BAFE">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-11 10:55:41 UTC</createdTime>
+<ownerDesignName>Modelo</ownerDesignName>
+<engineerTo>
+<item key="619B089B-02AB-9E26-7DA1-016B57AA5CCF" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT020</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<dataTypeScale>5</dataTypeScale>
+<ownDataTypeParameters>,7,5</ownDataTypeParameters>
+</Attribute>
+<Attribute name="EdadCliente" id="B4A9BF6D-FA13-C111-CEE9-504FDC5EC097">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-11 10:59:51 UTC</createdTime>
+<ownerDesignName>Modelo</ownerDesignName>
+<engineerTo>
+<item key="619B089B-02AB-9E26-7DA1-016B57AA5CCF" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="NombreCompleto" id="10AF36D7-B45B-1FE6-10F0-01D8F4181E0A">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-07 16:56:31 UTC</createdTime>
+<ownerDesignName>Modelo</ownerDesignName>
+<engineerTo>
+<item key="619B089B-02AB-9E26-7DA1-016B57AA5CCF" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 CHAR</dataTypeSize>
+<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="TelefonoCliente" id="9E36307E-4F0B-2151-6A85-759D74F473D9">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-12 21:32:16 UTC</createdTime>
+<ownerDesignName>Modelo</ownerDesignName>
+<engineerTo>
+<item key="619B089B-02AB-9E26-7DA1-016B57AA5CCF" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="C86D0ADB-DD77-DEC5-87C8-D4A0843BC465" name="CLIETNE PK">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-07 16:56:10 UTC</createdTime>
+<ownerDesignName>Modelo</ownerDesignName>
+<engineerTo>
+<item key="619B089B-02AB-9E26-7DA1-016B57AA5CCF" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>D3202C57-4507-8D4D-996B-CEFA933792F2</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

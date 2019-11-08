@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="818AFEA0-FD0B-46D4-0F80-406D49E7352A" containerWithKeyObject="262D6260-EA5A-D555-2D6D-A2FE78FE6100" localFKIndex="08BD704C-A9F7-AE05-AAA7-22BDDD767EE7" name="PRODXSUCURSAL_SUCURSAL_FK">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-13 16:57:00 UTC</createdTime>
+<generatorID>126DC0F1-48F9-3DAE-C8F2-00752461D085</generatorID>
+<ownerDesignName>Modelo</ownerDesignName>
+<referredTableLongName>SUCURSAL</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>BFF719AD-C3BC-3E93-D160-BF6D033636C7</referredTableID>
+<keyObject>6404C1D5-BB5D-271B-9424-FA21FC9759CB</keyObject>
+<referredKeyID>6404C1D5-BB5D-271B-9424-FA21FC9759CB</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>CodSucursal</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

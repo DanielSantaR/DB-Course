@@ -1,0 +1,84 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="03F195B6-CE55-4D59-33E7-D477ED44003C" name="DOMICILIARIO">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-13 16:57:00 UTC</createdTime>
+<generatorID>9A1FDAC5-419A-ABC2-3418-0C4CAF479E47</generatorID>
+<ownerDesignName>Modelo</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="IDEmpleado" id="DA9ECEF2-9F47-5E99-78A9-AE1B4B9C2AFE">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-13 16:57:00 UTC</createdTime>
+<generatorID>9F635648-063B-D164-E829-107B711B9B61</generatorID>
+<ownerDesignName>Modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="52CA2B66-7B9E-C9EE-18AC-370203B324C0" referredColumn="1C66BD3A-F7A4-DB2D-5E40-55387D0D0F0D"/>
+</associations>
+</Column>
+<Column name="CodSucursal" id="59C4FAAB-45E1-87B3-A73B-101C405FC1CB">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-13 16:57:00 UTC</createdTime>
+<generatorID>72E7841B-F465-3C78-E2C2-EDBB590416A1</generatorID>
+<ownerDesignName>Modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="52CA2B66-7B9E-C9EE-18AC-370203B324C0" referredColumn="A421B45B-709A-7F89-0771-392A9E64C7AC"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="8BCEA5D2-4243-8BB8-DA54-4B8A02158752" name="DOMICILIARIO_PK">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-13 16:57:00 UTC</createdTime>
+<generatorID>455D74AA-545C-7CAF-9868-95F08ECD68AF</generatorID>
+<ownerDesignName>Modelo</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="59C4FAAB-45E1-87B3-A73B-101C405FC1CB"/>
+<colUsage columnID="DA9ECEF2-9F47-5E99-78A9-AE1B4B9C2AFE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2A2BF1DA-2D72-B7D0-E78A-81C858EAD6D2" name="DOMICILIARIO_PKv1">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-13 16:57:00 UTC</createdTime>
+<generatorID>B89D7F39-D5B0-C781-9BA4-5CE8EFAB43E4</generatorID>
+<ownerDesignName>Modelo</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+</ind_PK_UK>
+<ind_PK_UK id="6855DDF8-89FD-FA58-CA24-4531444416E4" name="DOMICILIARIO_EMPLEADO_FK">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-13 16:57:00 UTC</createdTime>
+<generatorID>00F3635B-54FC-0962-844C-D84EF6CDF0A6</generatorID>
+<ownerDesignName>Modelo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="59C4FAAB-45E1-87B3-A73B-101C405FC1CB"/>
+<colUsage columnID="DA9ECEF2-9F47-5E99-78A9-AE1B4B9C2AFE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="51D83752-1CE6-AD3D-27CE-62F913AB0D50" name="DOMICILIARIO_JEFE_FK">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-13 16:57:00 UTC</createdTime>
+<generatorID>2A7FBB1A-87A8-C7A2-86A4-E5D571489ACF</generatorID>
+<ownerDesignName>Modelo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+</ind_PK_UK>
+</indexes>
+</Table>

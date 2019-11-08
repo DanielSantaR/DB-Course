@@ -1,0 +1,99 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="2A5989DE-3C87-452A-B6BB-26C5763F1C2A" name="COMPRAXSUCURSAL">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-07 17:31:35 UTC</createdTime>
+<ownerDesignName>Modelo</ownerDesignName>
+<engineerTo>
+<item key="619B089B-02AB-9E26-7DA1-016B57AA5CCF" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="IDCompra" id="B5430FAC-3EAA-7443-0619-084371A4C561">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-13 16:24:19 UTC</createdTime>
+<ownerDesignName>Modelo</ownerDesignName>
+<engineerTo>
+<item key="619B089B-02AB-9E26-7DA1-016B57AA5CCF" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="CodSucursal" id="52AC75F0-F71C-7799-FA0F-359634A0B188">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-07 17:32:22 UTC</createdTime>
+<generatorID>C81A7B09-6925-0356-AB4E-8B4B42E19F55</generatorID>
+<ownerDesignName>Modelo</ownerDesignName>
+<engineerTo>
+<item key="619B089B-02AB-9E26-7DA1-016B57AA5CCF" value="true"/>
+</engineerTo>
+<referedAttribute>78D4C3D9-05BA-18F9-F88F-DA6098BD4D97</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="CantidadProdductosCompra" id="E1D22BCF-562E-5973-A3F3-BE30F82BF7B9">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-10 04:02:15 UTC</createdTime>
+<ownerDesignName>Modelo</ownerDesignName>
+<engineerTo>
+<item key="619B089B-02AB-9E26-7DA1-016B57AA5CCF" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="CodProveedor" id="BC592D4A-CC5F-6B71-4C45-8EACBAB6333D">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-12 23:15:44 UTC</createdTime>
+<generatorID>4331FAE1-AF1C-3CAA-05ED-6EF993A5E1D7</generatorID>
+<ownerDesignName>Modelo</ownerDesignName>
+<engineerTo>
+<item key="619B089B-02AB-9E26-7DA1-016B57AA5CCF" value="true"/>
+</engineerTo>
+<referedAttribute>7F1BF12C-7333-09A8-7DB2-A72295E82827</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="PrecioTotal" id="F1F18CC6-22CB-C2EA-84CB-91B496D9028D">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-13 16:39:00 UTC</createdTime>
+<ownerDesignName>Modelo</ownerDesignName>
+<engineerTo>
+<item key="619B089B-02AB-9E26-7DA1-016B57AA5CCF" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="48DE5B7D-0744-1ECB-2B26-635F853272F1" name="COMPRA POR ALMACEN PK">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-07 17:32:10 UTC</createdTime>
+<ownerDesignName>Modelo</ownerDesignName>
+<engineerTo>
+<item key="619B089B-02AB-9E26-7DA1-016B57AA5CCF" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>52AC75F0-F71C-7799-FA0F-359634A0B188</attributeRef>
+<attributeRef>BC592D4A-CC5F-6B71-4C45-8EACBAB6333D</attributeRef>
+<attributeRef>B5430FAC-3EAA-7443-0619-084371A4C561</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

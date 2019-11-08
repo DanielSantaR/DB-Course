@@ -1,0 +1,146 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="094EEAA7-40D8-2DC5-3A24-F1C3E9E12A98" name="DOMICILIO">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-13 16:57:00 UTC</createdTime>
+<generatorID>D2376E7D-6A1D-F017-DAD6-52AB9D9B126F</generatorID>
+<ownerDesignName>Modelo</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="VENTA_CodVenta" id="50673104-37EA-B79B-50D4-D7D33ADBFFE8">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-13 16:57:00 UTC</createdTime>
+<generatorID>11F449ED-0CA7-4812-80C1-821765D06D3E</generatorID>
+<ownerDesignName>Modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0B56FF09-E543-39A7-04DF-F97421B671BA" referredColumn="0BF7A106-1DAD-D5F6-EE1E-32CBD8E17087"/>
+</associations>
+</Column>
+<Column name="VENTA_CLIENTE_IDCliente" id="AAEBC60F-7B4E-126C-3846-22EC691A83BE">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-13 16:57:00 UTC</createdTime>
+<generatorID>B2C56E00-29FF-29AC-7D75-7C851E7C51DB</generatorID>
+<ownerDesignName>Modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0B56FF09-E543-39A7-04DF-F97421B671BA" referredColumn="B443A1B9-5F62-6FD3-05AA-5C2B0AACDA6A"/>
+</associations>
+</Column>
+<Column name="Entregado" id="EB3627C3-4D96-26E7-6445-13E16EF5AC7A">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-13 16:57:00 UTC</createdTime>
+<generatorID>A1CDD291-A809-CAB5-07A1-65C18DC30F42</generatorID>
+<ownerDesignName>Modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Fecha_de_Entrega" id="2DD298CB-23C1-3297-E37F-7175808B20BE">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-13 16:57:00 UTC</createdTime>
+<generatorID>028CC86F-62B2-D591-1A56-1144A40FB9EF</generatorID>
+<ownerDesignName>Modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT047</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="VENTA_CAJA_NumeroCaja" id="1AD41353-5EF1-32E1-4601-67070B1959EC">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-13 16:57:00 UTC</createdTime>
+<generatorID>5D639DAD-AE48-57E4-4765-6112267E9BB4</generatorID>
+<ownerDesignName>Modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0B56FF09-E543-39A7-04DF-F97421B671BA" referredColumn="7DB1682C-FA6F-8BE7-8C89-58B6B0AB14B0"/>
+</associations>
+</Column>
+<Column name="VENTA_SUCURSAL_CodSucursal" id="3A3F02DE-2A76-BA55-DB99-26BDA150352C">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-13 16:57:00 UTC</createdTime>
+<generatorID>D40D1219-50BD-0BCE-074D-3F1BE4C55F46</generatorID>
+<ownerDesignName>Modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0B56FF09-E543-39A7-04DF-F97421B671BA" referredColumn="383873CE-FB14-D94E-3A25-926778E2AC15"/>
+</associations>
+</Column>
+<Column name="Fecha_de_Entregado" id="28D05E88-8A31-596E-4918-E08E65215743">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-13 16:57:00 UTC</createdTime>
+<generatorID>5F4D6AFB-1AEB-5F62-2E9D-B9FB6070B20B</generatorID>
+<ownerDesignName>Modelo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT047</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="44F08F06-A91F-E240-9F6E-9EB721292933" name="DOMICILIO_PK">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-13 16:57:00 UTC</createdTime>
+<generatorID>4681664D-7AA0-D9C8-9DC4-7956D4E1542B</generatorID>
+<ownerDesignName>Modelo</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AAEBC60F-7B4E-126C-3846-22EC691A83BE"/>
+<colUsage columnID="50673104-37EA-B79B-50D4-D7D33ADBFFE8"/>
+<colUsage columnID="1AD41353-5EF1-32E1-4601-67070B1959EC"/>
+<colUsage columnID="3A3F02DE-2A76-BA55-DB99-26BDA150352C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="196A3971-ED84-4520-81DB-ECB96780475A" name="DOMICILIO_VENTA_FK">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-13 16:57:00 UTC</createdTime>
+<generatorID>6CE450C4-E0CB-76B8-60F6-729012D0CDA6</generatorID>
+<ownerDesignName>Modelo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AAEBC60F-7B4E-126C-3846-22EC691A83BE"/>
+<colUsage columnID="50673104-37EA-B79B-50D4-D7D33ADBFFE8"/>
+<colUsage columnID="1AD41353-5EF1-32E1-4601-67070B1959EC"/>
+<colUsage columnID="3A3F02DE-2A76-BA55-DB99-26BDA150352C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="AE721C21-FEEE-C00E-6D66-D232622D018F" name="DOMICILIO_DOMICILIARIO_FK">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-13 16:57:00 UTC</createdTime>
+<generatorID>D8F6C888-FCAB-B945-3A39-1749FE0CF9AB</generatorID>
+<ownerDesignName>Modelo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+</ind_PK_UK>
+</indexes>
+</Table>

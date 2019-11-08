@@ -1,0 +1,164 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="494E36DF-BB5C-B114-F676-3BBDFDD2E39A" name="VENTA">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-13 16:57:00 UTC</createdTime>
+<generatorID>15974DDF-9175-43F6-5628-40906DFC6BD1</generatorID>
+<ownerDesignName>Modelo</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CodVenta" id="0BF7A106-1DAD-D5F6-EE1E-32CBD8E17087">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-13 16:57:00 UTC</createdTime>
+<generatorID>EF140EF0-AC59-23A1-8B89-B4FE9615308D</generatorID>
+<ownerDesignName>Modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CLIENTE_IDCliente" id="B443A1B9-5F62-6FD3-05AA-5C2B0AACDA6A">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-13 16:57:00 UTC</createdTime>
+<generatorID>6EDDE0CE-7B5B-05BA-4850-AC9C83CB272A</generatorID>
+<ownerDesignName>Modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3C856606-D670-870D-4544-CA8B0B2433BF" referredColumn="FB76F5AD-5B01-E416-CBAE-B9B41D53E7F3"/>
+</associations>
+</Column>
+<Column name="Metodo_de_Pago" id="D168ACB3-5823-24FF-4340-4E5092E157CE">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-13 16:57:00 UTC</createdTime>
+<generatorID>D33AFC0F-B778-98A2-B44D-A6BF417867A1</generatorID>
+<ownerDesignName>Modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FechaVenta" id="49F9436E-900B-AA8C-6748-86AEA01DF2F4">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-13 16:57:00 UTC</createdTime>
+<generatorID>8DFDB5F1-ACD7-EE09-13AF-028E990892DC</generatorID>
+<ownerDesignName>Modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT047</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TipoVenta" id="326B6AC7-E585-0A56-BBAF-5CB2615C9EF8">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-13 16:57:00 UTC</createdTime>
+<generatorID>539E8062-C6F8-B656-8B12-3406B37A227F</generatorID>
+<ownerDesignName>Modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>6 CHAR</dataTypeSize>
+<ownDataTypeParameters>6 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CAJA_NumeroCaja" id="7DB1682C-FA6F-8BE7-8C89-58B6B0AB14B0">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-13 16:57:00 UTC</createdTime>
+<generatorID>57D4EE41-C06F-78E4-8CC2-A4962C8A3D75</generatorID>
+<ownerDesignName>Modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="058E9F87-47D5-1B29-4335-A1832004AF96" referredColumn="91C29E56-FAEB-BAC3-F268-A36A59B09392"/>
+</associations>
+</Column>
+<Column name="TotalVenta" id="1E1389FF-AD5D-08FB-9DDE-B85C3203CA1E">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-13 16:57:00 UTC</createdTime>
+<generatorID>BD407871-1F6C-7162-FF7D-974FADD86417</generatorID>
+<ownerDesignName>Modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SUCURSAL_CodSucursal" id="383873CE-FB14-D94E-3A25-926778E2AC15">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-13 16:57:00 UTC</createdTime>
+<generatorID>91A25485-742A-3B91-463F-25A9FB477756</generatorID>
+<ownerDesignName>Modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D08616DC-77A9-73B7-64C4-BA259E6AFE9C" referredColumn="8282A3DD-0821-52DD-C8AC-B384BFE701A5"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="347A9DAF-8BC2-7B53-7A0A-B21172BB38E1" name="VENTA_PK">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-13 16:57:00 UTC</createdTime>
+<generatorID>4412EDBA-D7A4-6ED2-5F3E-53A7108DDF3C</generatorID>
+<ownerDesignName>Modelo</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B443A1B9-5F62-6FD3-05AA-5C2B0AACDA6A"/>
+<colUsage columnID="0BF7A106-1DAD-D5F6-EE1E-32CBD8E17087"/>
+<colUsage columnID="7DB1682C-FA6F-8BE7-8C89-58B6B0AB14B0"/>
+<colUsage columnID="383873CE-FB14-D94E-3A25-926778E2AC15"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7A0B90A7-C4D1-0D44-48C0-790DF5C89A5E" name="VENTA_CLIENTE_FK">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-13 16:57:00 UTC</createdTime>
+<generatorID>DCCD0A6B-E021-8930-9CB7-960C1A4BE2DC</generatorID>
+<ownerDesignName>Modelo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B443A1B9-5F62-6FD3-05AA-5C2B0AACDA6A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F44A2ED8-B7DF-0CE7-D464-EBB48D962D19" name="VENTA_SUCURSAL_FK">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-13 16:57:00 UTC</createdTime>
+<generatorID>018BA04B-244F-25CF-6010-54C5EF65B6E2</generatorID>
+<ownerDesignName>Modelo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="383873CE-FB14-D94E-3A25-926778E2AC15"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F055E742-7BEA-CE07-54AD-D11DD0414BEA" name="VENTA_CAJA_FK">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-13 16:57:00 UTC</createdTime>
+<generatorID>5F9FA57E-570F-F0D2-22F7-C26A032A74BA</generatorID>
+<ownerDesignName>Modelo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7DB1682C-FA6F-8BE7-8C89-58B6B0AB14B0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

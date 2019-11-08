@@ -1,0 +1,131 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="D205E660-9DBC-1DCE-7DB9-D3BEAFA20E67" name="PRODXVENTA">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-07 16:59:38 UTC</createdTime>
+<ownerDesignName>Modelo</ownerDesignName>
+<engineerTo>
+<item key="619B089B-02AB-9E26-7DA1-016B57AA5CCF" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="CodProducto" id="87E2DDFC-CD8F-CA63-B2D8-7FA5C2AA2033">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-07 17:27:19 UTC</createdTime>
+<generatorID>B31AB81A-6F9D-6094-2CBC-F6CAC1974313</generatorID>
+<ownerDesignName>Modelo</ownerDesignName>
+<engineerTo>
+<item key="619B089B-02AB-9E26-7DA1-016B57AA5CCF" value="true"/>
+</engineerTo>
+<referedAttribute>61C7FA68-711B-0F4A-2F53-61F9FE60AC19</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="CodVenta" id="3A93F462-DA0E-4DDF-FE23-C2ABD490CFB9">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-07 22:20:37 UTC</createdTime>
+<generatorID>7BDD7681-7E1B-0488-4140-2E71CA1597F4</generatorID>
+<ownerDesignName>Modelo</ownerDesignName>
+<engineerTo>
+<item key="619B089B-02AB-9E26-7DA1-016B57AA5CCF" value="true"/>
+</engineerTo>
+<referedAttribute>EF140EF0-AC59-23A1-8B89-B4FE9615308D</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="IDCliente" id="9C3917C1-8BF9-3E16-26BA-5C99D50E73FE">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-07 22:20:48 UTC</createdTime>
+<generatorID>7BDD7681-7E1B-0488-4140-2E71CA1597F4</generatorID>
+<ownerDesignName>Modelo</ownerDesignName>
+<engineerTo>
+<item key="619B089B-02AB-9E26-7DA1-016B57AA5CCF" value="true"/>
+</engineerTo>
+<referedAttribute>6EDDE0CE-7B5B-05BA-4850-AC9C83CB272A</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="CantidadProdductosVenta" id="6E1791C4-EEF8-5EFC-C3A7-2CBBBB1131D5">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-11 11:09:06 UTC</createdTime>
+<ownerDesignName>Modelo</ownerDesignName>
+<engineerTo>
+<item key="619B089B-02AB-9E26-7DA1-016B57AA5CCF" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="SubTotal" id="EDADBF0A-5FF4-AC25-4DFD-4A4D415386AC">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-11 11:08:46 UTC</createdTime>
+<ownerDesignName>Modelo</ownerDesignName>
+<engineerTo>
+<item key="619B089B-02AB-9E26-7DA1-016B57AA5CCF" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="NumeroCaja" id="09E16302-7E7F-7CAF-67E1-331335D05590">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-13 01:07:24 UTC</createdTime>
+<generatorID>7BDD7681-7E1B-0488-4140-2E71CA1597F4</generatorID>
+<ownerDesignName>Modelo</ownerDesignName>
+<engineerTo>
+<item key="619B089B-02AB-9E26-7DA1-016B57AA5CCF" value="true"/>
+</engineerTo>
+<referedAttribute>57D4EE41-C06F-78E4-8CC2-A4962C8A3D75</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="CodSucursal" id="28B67FDE-3B52-4A70-5F1A-238F086FD18E">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-13 13:41:39 UTC</createdTime>
+<generatorID>7BDD7681-7E1B-0488-4140-2E71CA1597F4</generatorID>
+<ownerDesignName>Modelo</ownerDesignName>
+<engineerTo>
+<item key="619B089B-02AB-9E26-7DA1-016B57AA5CCF" value="true"/>
+</engineerTo>
+<referedAttribute>91A25485-742A-3B91-463F-25A9FB477756</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="04FFC6C4-B60D-FDBC-EF4B-B6865E40B248" name="PRODUCTO POR VENTA PK">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-07 17:00:01 UTC</createdTime>
+<ownerDesignName>Modelo</ownerDesignName>
+<engineerTo>
+<item key="619B089B-02AB-9E26-7DA1-016B57AA5CCF" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>87E2DDFC-CD8F-CA63-B2D8-7FA5C2AA2033</attributeRef>
+<attributeRef>9C3917C1-8BF9-3E16-26BA-5C99D50E73FE</attributeRef>
+<attributeRef>3A93F462-DA0E-4DDF-FE23-C2ABD490CFB9</attributeRef>
+<attributeRef>09E16302-7E7F-7CAF-67E1-331335D05590</attributeRef>
+<attributeRef>28B67FDE-3B52-4A70-5F1A-238F086FD18E</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

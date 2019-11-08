@@ -1,0 +1,140 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="15974DDF-9175-43F6-5628-40906DFC6BD1" name="VENTA">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-07 16:54:56 UTC</createdTime>
+<ownerDesignName>Modelo</ownerDesignName>
+<engineerTo>
+<item key="619B089B-02AB-9E26-7DA1-016B57AA5CCF" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="CodVenta" id="EF140EF0-AC59-23A1-8B89-B4FE9615308D">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-07 16:55:02 UTC</createdTime>
+<ownerDesignName>Modelo</ownerDesignName>
+<engineerTo>
+<item key="619B089B-02AB-9E26-7DA1-016B57AA5CCF" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="IDCliente" id="6EDDE0CE-7B5B-05BA-4850-AC9C83CB272A">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-07 17:25:11 UTC</createdTime>
+<generatorID>DCCD0A6B-E021-8930-9CB7-960C1A4BE2DC</generatorID>
+<ownerDesignName>Modelo</ownerDesignName>
+<engineerTo>
+<item key="619B089B-02AB-9E26-7DA1-016B57AA5CCF" value="true"/>
+</engineerTo>
+<referedAttribute>D3202C57-4507-8D4D-996B-CEFA933792F2</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Metodo de Pago" id="D33AFC0F-B778-98A2-B44D-A6BF417867A1">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-10 03:23:38 UTC</createdTime>
+<ownerDesignName>Modelo</ownerDesignName>
+<engineerTo>
+<item key="619B089B-02AB-9E26-7DA1-016B57AA5CCF" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="FechaVenta" id="8DFDB5F1-ACD7-EE09-13AF-028E990892DC">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-10 04:05:03 UTC</createdTime>
+<ownerDesignName>Modelo</ownerDesignName>
+<engineerTo>
+<item key="619B089B-02AB-9E26-7DA1-016B57AA5CCF" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT047</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="TipoVenta" id="539E8062-C6F8-B656-8B12-3406B37A227F">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-10 04:07:33 UTC</createdTime>
+<ownerDesignName>Modelo</ownerDesignName>
+<engineerTo>
+<item key="619B089B-02AB-9E26-7DA1-016B57AA5CCF" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>6 CHAR</dataTypeSize>
+<ownDataTypeParameters>6 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="NumeroCaja" id="57D4EE41-C06F-78E4-8CC2-A4962C8A3D75">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-11 10:04:08 UTC</createdTime>
+<generatorID>5F9FA57E-570F-F0D2-22F7-C26A032A74BA</generatorID>
+<ownerDesignName>Modelo</ownerDesignName>
+<engineerTo>
+<item key="619B089B-02AB-9E26-7DA1-016B57AA5CCF" value="true"/>
+</engineerTo>
+<referedAttribute>C9A5A6EC-F24C-D0BF-3718-1DCC05E23A0F</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="TotalVenta" id="BD407871-1F6C-7162-FF7D-974FADD86417">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-11 11:05:56 UTC</createdTime>
+<ownerDesignName>Modelo</ownerDesignName>
+<engineerTo>
+<item key="619B089B-02AB-9E26-7DA1-016B57AA5CCF" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="CodSucursal" id="91A25485-742A-3B91-463F-25A9FB477756">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-13 13:41:39 UTC</createdTime>
+<generatorID>018BA04B-244F-25CF-6010-54C5EF65B6E2</generatorID>
+<ownerDesignName>Modelo</ownerDesignName>
+<engineerTo>
+<item key="619B089B-02AB-9E26-7DA1-016B57AA5CCF" value="true"/>
+</engineerTo>
+<referedAttribute>78D4C3D9-05BA-18F9-F88F-DA6098BD4D97</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="4412EDBA-D7A4-6ED2-5F3E-53A7108DDF3C" name="VENTA PK">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-07 16:55:11 UTC</createdTime>
+<ownerDesignName>Modelo</ownerDesignName>
+<engineerTo>
+<item key="619B089B-02AB-9E26-7DA1-016B57AA5CCF" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>6EDDE0CE-7B5B-05BA-4850-AC9C83CB272A</attributeRef>
+<attributeRef>EF140EF0-AC59-23A1-8B89-B4FE9615308D</attributeRef>
+<attributeRef>57D4EE41-C06F-78E4-8CC2-A4962C8A3D75</attributeRef>
+<attributeRef>91A25485-742A-3B91-463F-25A9FB477756</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

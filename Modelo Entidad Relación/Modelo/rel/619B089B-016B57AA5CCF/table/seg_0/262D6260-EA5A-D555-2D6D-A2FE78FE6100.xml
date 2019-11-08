@@ -1,0 +1,124 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="262D6260-EA5A-D555-2D6D-A2FE78FE6100" name="PRODXSUCURSAL">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-13 16:57:00 UTC</createdTime>
+<generatorID>27A672B1-48D6-6B76-CF11-9C4F162B7217</generatorID>
+<ownerDesignName>Modelo</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="PRODUCTO_CodProducto" id="F2D298CA-D911-EA87-CDFE-058CB7669219">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-13 16:57:00 UTC</createdTime>
+<generatorID>61C7FA68-711B-0F4A-2F53-61F9FE60AC19</generatorID>
+<ownerDesignName>Modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="17A24073-4D2F-8A07-D1E8-0B70DBCB82AE" referredColumn="BF138232-FFC1-0A9A-8BD3-675D1E5C940D"/>
+</associations>
+</Column>
+<Column name="SUCURSAL_CodSucursal" id="E9DCEB8D-1851-559C-893C-BD4D0668032C">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-13 16:57:00 UTC</createdTime>
+<generatorID>D82A42FE-EF47-85F8-7E70-474E6F0F8655</generatorID>
+<ownerDesignName>Modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="818AFEA0-FD0B-46D4-0F80-406D49E7352A" referredColumn="8282A3DD-0821-52DD-C8AC-B384BFE701A5"/>
+</associations>
+</Column>
+<Column name="CantidadProdductosInventario" id="B710B231-07C0-6B17-8858-69AD99D1192D">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-13 16:57:00 UTC</createdTime>
+<generatorID>025358C5-4025-BB7A-E86A-A4404B285AB6</generatorID>
+<ownerDesignName>Modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PrecioVenta" id="149E7AB0-1376-F9A0-350E-5CFCCDC6773D">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-13 16:57:00 UTC</createdTime>
+<generatorID>7CD7E7FF-9564-A01D-5375-13881825F743</generatorID>
+<ownerDesignName>Modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PrecioEspecial" id="4C2A1696-CFEE-80FC-6497-A77D65458A82">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-13 16:57:00 UTC</createdTime>
+<generatorID>F821B307-375F-A0B7-B5F7-A0BB7DE7E472</generatorID>
+<ownerDesignName>Modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Oferta" id="B094396E-41B7-AA06-A47B-1CEF9352F4C8">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-13 16:57:00 UTC</createdTime>
+<generatorID>2EDEEE09-6373-8721-F69E-AD2A51443981</generatorID>
+<ownerDesignName>Modelo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A277819B-3E45-82EC-E5D9-3CE21EAC2C25" name="PRODXSUCURSAL_PK">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-13 16:57:00 UTC</createdTime>
+<generatorID>0F500AAB-7534-7649-1EF7-6EE29217AF20</generatorID>
+<ownerDesignName>Modelo</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F2D298CA-D911-EA87-CDFE-058CB7669219"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="08BD704C-A9F7-AE05-AAA7-22BDDD767EE7" name="PRODXSUCURSAL_SUCURSAL_FK">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-13 16:57:00 UTC</createdTime>
+<generatorID>126DC0F1-48F9-3DAE-C8F2-00752461D085</generatorID>
+<ownerDesignName>Modelo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E9DCEB8D-1851-559C-893C-BD4D0668032C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7037F8BE-1232-52C8-5551-07993AC9986B" name="PRODXSUCURSAL_PRODUCTO_FK">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-13 16:57:00 UTC</createdTime>
+<generatorID>83658492-270A-C6D6-C7C7-4B19586C120D</generatorID>
+<ownerDesignName>Modelo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F2D298CA-D911-EA87-CDFE-058CB7669219"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

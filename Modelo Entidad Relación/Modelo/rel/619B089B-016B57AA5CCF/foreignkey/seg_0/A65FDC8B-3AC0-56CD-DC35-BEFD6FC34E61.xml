@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="A65FDC8B-3AC0-56CD-DC35-BEFD6FC34E61" containerWithKeyObject="2888E4BC-844B-461E-412D-CF9F3B4CCBFA" localFKIndex="C0FBC6D2-450C-3526-0350-6752B8D16C00" name="PRODXCOMPRA_COMPRAXSUCURSAL_FK">
+<createdBy>Daniel</createdBy>
+<createdTime>2019-09-13 16:57:00 UTC</createdTime>
+<generatorID>86BC9AAB-5D9D-3759-81D5-34616FEEE923</generatorID>
+<ownerDesignName>Modelo</ownerDesignName>
+<referredTableLongName>COMPRAXSUCURSAL</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>ECDE62BF-EC78-7E82-993B-9EB5374FB3B6</referredTableID>
+<keyObject>348723EA-9C70-7D37-0C77-0ADF2917665B</keyObject>
+<referredKeyID>348723EA-9C70-7D37-0C77-0ADF2917665B</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>SUCURSAL_CodSucursal,PROVEEDOR_CodProveedor,IDCompra</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>
